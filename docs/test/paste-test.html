@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paste Handler Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #8e44ad;
+        }
+        .highlight {
+            background-color: #ffffcc;
+            padding: 3px;
+        }
+        .important {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        code {
+            background-color: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .custom-list {
+            list-style-type: square;
+            color: #3498db;
+        }
+        .custom-list li span {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test Document for Copy-Paste Functionality</h1>
+        <p>This document contains various HTML elements and formatting to test how your <code>CleanPasteHandler</code> handles different types of content.</p>
+    </header>
+
+    <section id="text-formatting">
+        <h2>Text Formatting</h2>
+        <p>This paragraph contains <strong>bold text</strong>, <em>italic text</em>, <u>underlined text</u>, and <span class="highlight">highlighted text</span>.</p>
+        <p>You might also want to test <span style="font-size: 18px; color: red;">inline styles</span> and <span class="important">text with classes</span>.</p>
+        <p>Here's some <del>strikethrough text</del> and <ins>inserted text</ins> for your testing pleasure.</p>
+        <p>Don't forget about <sup>superscript</sup> and <sub>subscript</sub> formatting.</p>
+        <p>And some text with <span style="font-family: 'Times New Roman', Times, serif;">different fonts</span> or <span style="letter-spacing: 3px;">custom letter spacing</span>.</p>
+    </section>
+
+    <section id="headings">
+        <h2>Heading Levels</h2>
+        <h1>This is an H1 heading</h1>
+        <h2>This is an H2 heading</h2>
+        <h3>This is an H3 heading</h3>
+        <h4>This is an H4 heading</h4>
+        <h5>This is an H5 heading</h5>
+        <h6>This is an H6 heading</h6>
+    </section>
+
+    <section id="lists">
+        <h2>Lists</h2>
+        <h3>Unordered List</h3>
+        <ul>
+            <li>First item</li>
+            <li>Second item with <strong>bold</strong> text</li>
+            <li>
+                Third item with a nested list
+                <ul>
+                    <li>Nested item 1</li>
+                    <li>Nested item 2</li>
+                </ul>
+            </li>
+            <li>Fourth item</li>
+        </ul>
+
+        <h3>Ordered List</h3>
+        <ol>
+            <li>First item</li>
+            <li>Second item with <em>italic</em> text</li>
+            <li>
+                Third item with a nested list
+                <ol>
+                    <li>Nested item 1</li>
+                    <li>Nested item 2</li>
+                </ol>
+            </li>
+            <li>Fourth item</li>
+        </ol>
+
+        <h3>Definition List</h3>
+        <dl>
+            <dt>Term 1</dt>
+            <dd>Definition 1</dd>
+            <dt>Term 2</dt>
+            <dd>Definition 2 with <span class="important">important text</span></dd>
+        </dl>
+
+        <h3>Custom Styled List</h3>
+        <ul class="custom-list">
+            <li><span>This list has custom styling</span></li>
+            <li><span>Items have a different bullet type</span></li>
+            <li><span>And different colors</span></li>
+        </ul>
+    </section>
+
+    <section id="quotes">
+        <h2>Blockquotes</h2>
+        <blockquote>
+            <p>This is a blockquote. It contains a quotation or excerpt from another source.</p>
+            <p>It can contain multiple paragraphs and <em>formatting</em>.</p>
+            <cite>— Famous Person</cite>
+        </blockquote>
+    </section>
+
+    <section id="code">
+        <h2>Code Blocks</h2>
+        <p>Here's an inline <code>code snippet</code>.</p>
+        <p>And here's a code block:</p>
+        <pre><code>function helloWorld() {
+    console.log("Hello, world!");
+}
+
+helloWorld();</code></pre>
+    </section>
+
+    <section id="tables">
+        <h2>Tables</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Header 1</th>
+                    <th>Header 2</th>
+                    <th>Header 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Row 1, Cell 1</td>
+                    <td>Row 1, Cell 2</td>
+                    <td>Row 1, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 2, Cell 1</td>
+                    <td><strong>Bold text</strong> in a cell</td>
+                    <td>Row 2, Cell 3</td>
+                </tr>
+                <tr>
+                    <td>Row 3, Cell 1</td>
+                    <td>Row 3, Cell 2</td>
+                    <td><em>Italic text</em> in a cell</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="links">
+        <h2>Links</h2>
+        <p>Here's a <a href="https://example.com">simple link</a> to a website.</p>
+        <p>Here's a <a href="https://example.com" title="Visit Example Website" style="color: blue; text-decoration: none;">link with title and inline styling</a>.</p>
+        <p>Here's a <a href="mailto:test@example.com">mailto link</a> for email addresses.</p>
+    </section>
+
+    <section id="special-characters">
+        <h2>Special Characters</h2>
+        <p>Currency symbols: € £ $ ¥ ₹</p>
+        <p>Mathematical symbols: ± × ÷ ≠ ≈ ∞ ∑ ∫</p>
+        <p>Arrows: → ← ↑ ↓ ↔ ↕</p>
+        <p>Punctuation: " " ' ' … • ‐ – —</p>
+        <p>Other symbols: © ® ™ ° § ¶</p>
+    </section>
+
+    <section id="ms-word-bullets">
+        <h2>MS Word Style Bullet Points</h2>
+        <!-- This simulates how Word's bullets might look when pasted -->
+        <p class="MsoListParagraphCxSpFirst" style="text-indent: -18pt;">
+            <span style="font-family: Symbol;">·</span>
+            <span style="font-family: 'Times New Roman'; font-size: 7pt;">         </span>
+            First Word-style bullet point
+        </p>
+        <p class="MsoListParagraphCxSpMiddle" style="text-indent: -18pt;">
+            <span style="font-family: Symbol;">·</span>
+            <span style="font-family: 'Times New Roman'; font-size: 7pt;">         </span>
+            Second Word-style bullet with <strong>formatting</strong>
+        </p>
+        <p class="MsoListParagraphCxSpLast" style="text-indent: -18pt;">
+            <span style="font-family: Symbol;">·</span>
+            <span style="font-family: 'Times New Roman'; font-size: 7pt;">         </span>
+            Third Word-style bullet point
+        </p>
+    </section>
+
+    <section id="complex-structure">
+        <h2>Complex Nested Structure</h2>
+        <div class="complex-container" style="border: 1px solid #ddd; padding: 15px; background-color: #f9f9f9;">
+            <h3>Nested Content</h3>
+            <p>This section contains <span style="color: blue;">nested elements</span> with various styles.</p>
+            <div style="margin-left: 20px; border-left: 3px solid #e74c3c; padding-left: 15px;">
+                <p>Here's a <strong>nested div</strong> with its own styling.</p>
+                <ul>
+                    <li>A list inside the nested div</li>
+                    <li>With multiple items</li>
+                </ul>
+            </div>
+            <p>And some text <span style="background-color: #e74c3c; color: white; padding: 2px 5px; border-radius: 3px;">with complex inline styling</span> after the nested div.</p>
+        </div>
+    </section>
+
+    <section id="hidden-content">
+        <h2>Hidden Content</h2>
+        <p>This paragraph is visible.</p>
+        <p style="display: none;">This paragraph has display:none and should not be visible.</p>
+        <p hidden>This paragraph has the hidden attribute and should not be visible.</p>
+        <div style="visibility: hidden;">
+            <p>This div has visibility:hidden and should not be visible.</p>
+        </div>
+    </section>
+
+    <footer style="margin-top: 50px; border-top: 1px solid #ddd; padding-top: 20px;">
+        <p><small>This document was created to test the <code>CleanPasteHandler</code> functionality.</small></p>
+    </footer>
+</body>
+</html>

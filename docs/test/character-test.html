@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Encoding Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        .char-group {
+            margin-bottom: 2em;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .char {
+            display: inline-block;
+            margin: 0.3em;
+            padding: 0.5em;
+            background-color: #f9f9f9;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            font-size: 1.2em;
+        }
+        .char-info {
+            display: block;
+            font-size: 0.7em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>Character Encoding Test</h1>
+    <p>Use this page to test handling of various Unicode characters in your paste handler.</p>
+
+    <div class="char-group">
+        <h2>Basic Latin Characters</h2>
+        <div class="char">A <span class="char-info">U+0041</span></div>
+        <div class="char">Z <span class="char-info">U+005A</span></div>
+        <div class="char">a <span class="char-info">U+0061</span></div>
+        <div class="char">z <span class="char-info">U+007A</span></div>
+        <div class="char">0 <span class="char-info">U+0030</span></div>
+        <div class="char">9 <span class="char-info">U+0039</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Currency Symbols</h2>
+        <div class="char">$ <span class="char-info">U+0024</span></div>
+        <div class="char">€ <span class="char-info">U+20AC</span></div>
+        <div class="char">£ <span class="char-info">U+00A3</span></div>
+        <div class="char">¥ <span class="char-info">U+00A5</span></div>
+        <div class="char">₹ <span class="char-info">U+20B9</span></div>
+        <div class="char">₽ <span class="char-info">U+20BD</span></div>
+        <div class="char">¢ <span class="char-info">U+00A2</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Mathematical Symbols</h2>
+        <div class="char">± <span class="char-info">U+00B1</span></div>
+        <div class="char">× <span class="char-info">U+00D7</span></div>
+        <div class="char">÷ <span class="char-info">U+00F7</span></div>
+        <div class="char">≠ <span class="char-info">U+2260</span></div>
+        <div class="char">≈ <span class="char-info">U+2248</span></div>
+        <div class="char">≤ <span class="char-info">U+2264</span></div>
+        <div class="char">≥ <span class="char-info">U+2265</span></div>
+        <div class="char">∞ <span class="char-info">U+221E</span></div>
+        <div class="char">∑ <span class="char-info">U+2211</span></div>
+        <div class="char">∫ <span class="char-info">U+222B</span></div>
+        <div class="char">π <span class="char-info">U+03C0</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Arrows</h2>
+        <div class="char">→ <span class="char-info">U+2192</span></div>
+        <div class="char">← <span class="char-info">U+2190</span></div>
+        <div class="char">↑ <span class="char-info">U+2191</span></div>
+        <div class="char">↓ <span class="char-info">U+2193</span></div>
+        <div class="char">↔ <span class="char-info">U+2194</span></div>
+        <div class="char">↕ <span class="char-info">U+2195</span></div>
+        <div class="char">⇒ <span class="char-info">U+21D2</span></div>
+        <div class="char">⇐ <span class="char-info">U+21D0</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Punctuation</h2>
+        <div class="char">" <span class="char-info">U+201C</span></div>
+        <div class="char">" <span class="char-info">U+201D</span></div>
+        <div class="char">' <span class="char-info">U+2018</span></div>
+        <div class="char">' <span class="char-info">U+2019</span></div>
+        <div class="char">… <span class="char-info">U+2026</span></div>
+        <div class="char">• <span class="char-info">U+2022</span></div>
+        <div class="char">‐ <span class="char-info">U+2010</span></div>
+        <div class="char">– <span class="char-info">U+2013</span></div>
+        <div class="char">— <span class="char-info">U+2014</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Other Symbols</h2>
+        <div class="char">© <span class="char-info">U+00A9</span></div>
+        <div class="char">® <span class="char-info">U+00AE</span></div>
+        <div class="char">™ <span class="char-info">U+2122</span></div>
+        <div class="char">° <span class="char-info">U+00B0</span></div>
+        <div class="char">§ <span class="char-info">U+00A7</span></div>
+        <div class="char">¶ <span class="char-info">U+00B6</span></div>
+        <div class="char">† <span class="char-info">U+2020</span></div>
+        <div class="char">‡ <span class="char-info">U+2021</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Diacritical Marks</h2>
+        <div class="char">á <span class="char-info">U+00E1</span></div>
+        <div class="char">é <span class="char-info">U+00E9</span></div>
+        <div class="char">í <span class="char-info">U+00ED</span></div>
+        <div class="char">ó <span class="char-info">U+00F3</span></div>
+        <div class="char">ú <span class="char-info">U+00FA</span></div>
+        <div class="char">ñ <span class="char-info">U+00F1</span></div>
+        <div class="char">ç <span class="char-info">U+00E7</span></div>
+        <div class="char">ü <span class="char-info">U+00FC</span></div>
+        <div class="char">ø <span class="char-info">U+00F8</span></div>
+        <div class="char">å <span class="char-info">U+00E5</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Emoji</h2>
+        <div class="char">😀 <span class="char-info">U+1F600</span></div>
+        <div class="char">👍 <span class="char-info">U+1F44D</span></div>
+        <div class="char">❤️ <span class="char-info">U+2764 U+FE0F</span></div>
+        <div class="char">🔥 <span class="char-info">U+1F525</span></div>
+        <div class="char">🚀 <span class="char-info">U+1F680</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Extended Characters</h2>
+        <div class="char">Æ <span class="char-info">U+00C6</span></div>
+        <div class="char">æ <span class="char-info">U+00E6</span></div>
+        <div class="char">Œ <span class="char-info">U+0152</span></div>
+        <div class="char">œ <span class="char-info">U+0153</span></div>
+        <div class="char">ß <span class="char-info">U+00DF</span></div>
+    </div>
+
+    <div class="char-group">
+        <h2>Nordic Characters</h2>
+        <div class="char">Å <span class="char-info">U+00C5</span></div>
+        <div class="char">å <span class="char-info">U+00E5</span></div>
+        <div class="char">Ä <span class="char-info">U+00C4</span></div>
+        <div class="char">ä <span class="char-info">U+00E4</span></div>
+        <div class="char">Ö <span class="char-info">U+00D6</span></div>
+        <div class="char">ö <span class="char-info">U+00F6</span></div>
+        <div class="char">Ø <span class="char-info">U+00D8</span></div>
+        <div class="char">ø <span class="char-info">U+00F8</span></div>
+    </div>
+</body>
+</html>
